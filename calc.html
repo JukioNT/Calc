@@ -61,7 +61,7 @@
             <table>
                 <tr>
                     <td><button class="button" onclick="clean()">C</button></td>
-                    <td><button class="button"><</button></td>
+                    <td><button class="button" onclick="back()"><</button></td>
                     <td><button class="button" onclick="insert('/')">/</button></td>
                     <td><button class="button" onclick="insert('*')">*</button></td>
                 </tr>
@@ -104,6 +104,17 @@
         function clean()
         {
             document.getElementById('result').innerHTML = 0;
+        }
+        function back()
+        {
+            var numbers = document.getElementById('result').innerHTML;
+            if(numbers.length != 1)
+            {
+                document.getElementById('result').innerHTML = numbers.substring(0, numbers.length  -1);
+            }else
+            {
+                document.getElementById('result').innerHTML = 0;
+            }
         }
     </script>
 </body>
