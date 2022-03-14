@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -93,15 +92,12 @@
     <script>
         function insert(num)
         {
-            if(document.getElementById('result').innerHTML.length < 15)
+            if(document.getElementById('result').innerHTML == 0)
             {
-                if(document.getElementById('result').innerHTML == 0)
-                {
-                    document.getElementById('result').innerHTML = num;
-                }else
-                {
-                    document.getElementById('result').innerHTML += num;
-                }
+                document.getElementById('result').innerHTML = num;
+            }else
+            {
+                document.getElementById('result').innerHTML += num;
             }
         }
         function clean()
